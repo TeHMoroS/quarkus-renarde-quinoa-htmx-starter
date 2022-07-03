@@ -1,0 +1,21 @@
+{! The base template for Htmx-retrieved pages. !}
+{#if inject:utils.hxRequest}
+    {! When the Htmx request header ("HX-Request") is detected and set to "true", only the content part of the template will be generated. !}
+    {#insert}{/insert}
+{#else}
+    {! With no Htmx request header, the entire template is rendered and returned. !}
+    <!doctype html>
+    <html lang="en">
+        <head>
+            <base href="/">
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Quarkus + Renarde + Quinoa + Htmx - starter project</title>
+            <link rel="stylesheet" href="/main.css">
+        </head>
+        <body class="min-vh-100 d-flex flex-column">
+        <main class="container-fluid flex-grow-1" id="hxMainOutlet">{#insert}{/insert}</main>
+        <script src="/main.js"></script>
+        </body>
+    </html>
+{/if}

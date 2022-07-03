@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/quicksand-v22-latin-ext-regular.woff2") format("woff2"), url("../fonts/quicksand-v22-latin-ext-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/quicksand-v22-latin-ext-700.woff2") format("woff2"), url("../fonts/quicksand-v22-latin-ext-700.woff") format("woff");
+}
+
+@import "~bootstrap";
+
+a {
+  font-family: Quicksand, serif;
+}
